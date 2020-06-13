@@ -5,180 +5,76 @@
 }
 
 body {
+ width: 100%;
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+  border: 3px solid lightgrey;
+}
+
+.text-area {
+  width: 100%;
+  height: 100%;
   background-color: whitesmoke;
+  border-bottom: 2px solid lightgrey;
 }
 
-a {
-  text-decoration: none;
+.chat__text-area {
+  width: 100%;
+  height: 85%;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-header {
-  text-align: center;
-  padding: 50px 0;
-}
-
-#header_nav {
-  margin-top: 30px;
-}
-
-.nav-link {
-  margin: 0 5px;
-  color: black;
-  font-size: 1.2rem;
-}
-
-main {
+.input-form {
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
-#main_cards-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.card {
-  background-color: white;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.card-cont-wrap h3 {
-  color: grey;
-}
-
-.infected-card {
-  border-bottom: 8px solid #4d79ff;
-}
-
-.recoveries-card {
-  border-bottom: 8px solid #8cff66;
-}
-
-.deaths-card {
-  border-bottom: 8px solid #ff4d4d;
-}
-
-.card-cont-wrap {
+.input-field {
   width: 80%;
-  margin: 0 auto;
-  padding: 20px 0;
-}
-
-#main_select-container {
-  margin-top: 40px;
-}
-
-#main_charts-container {
-  margin: 50px auto 0 auto;
-  width: 80%;
-  height: 500px;
-  position: relative;
-}
-
-#login-form, #signup-form {
-  margin-top: 50px;
-}
-
-#signup-form, #login-form {
-  border: 3px solid #f1f1f1;
-  width: 50%;
-  margin: 0 auto;
-}
-
-/* Full-width inputs */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
   border: none;
+  padding: 10px;
   cursor: pointer;
+}
+
+.submit-btn {
+  width: 20%;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: lightgreen;
+}
+
+.chat__input-form {
   width: 100%;
+  height: 15%;
 }
 
-/* Add a hover effect for buttons */
-button:hover {
-  opacity: 0.8;
-}
 
-/* Add padding to containers */
-.container {
-  padding: 16px;
-}
+@media(max-width: 450px) {
+  .input-form {
+    flex-direction: column;
+  }
 
-.popup {
-  color: red;
-}
-
-#chat-container {
-  border: 3px solid darkgray;
-  width: 80%;
-  margin: 30px auto 50px auto;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-}
-
-#message-box {
-  height: 90%;
-  background-color: white;
-  overflow-y: scroll;
+  .input-field {
+    width: 100%;
+    height: 60%;
+  }
   
-}
-
-#message-form {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-}
-
-#message-form > button {
-  margin: 0;
-}
-
-.message {
-  margin: 0 0 20px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: lightgrey;
-  padding: 5px;
-  width: 30%;
-  border-radius: 5px;
-  white-space: normal;
-}
-
-@media(max-width: 1000px) {
-  #main_cards-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media(max-width: 500px) {
-  #main_cards-container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  #logo {
-    width: 250px;
-  }
-  .message {
-    width: 80%;
+  .submit-btn  {
+    width: 100%;
+    height: 40%; 
   }
 }

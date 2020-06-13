@@ -8,7 +8,19 @@
     <link rel="stylesheet" href="./stylesheets/styles.css">
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <script src="./js/application.js" async defer></script>
+    <div class="chat">
+      <div class="chat__text-area">
+        <div class="text-area"></div>
+      </div>
+      <div class="chat__input-form">
+          <form class="input-form">
+            <input type="text" placeholder="Type your message..." class="input-field">
+            <button type="submit" class="submit-btn">Send</button>
+          </form>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/application.js"></script>
+    <script src="./js/socket.js"></script>
   </body>
 </html>
