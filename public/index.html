@@ -4,23 +4,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Online Chat</title>
     <meta name="description" content="">
+    <link rel="shortcut icon" href="./images/like.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./stylesheets/styles.css">
   </head>
   <body>
     <div class="chat">
       <div class="chat__text-area">
-        <div class="text-area"></div>
+        <div class="text-area">
+        </div>
       </div>
       <div class="chat__input-form">
-          <form class="input-form">
-            <input type="text" placeholder="Type your message..." class="input-field">
-            <button type="submit" class="submit-btn">Send</button>
-          </form>
+        <form class="input-form">
+          <input type="text" name="message" placeholder="Type your message..." class="input-field">
+          <button type="submit" class="submit-btn">Send</button>
+        </form>
       </div>
     </div>
     <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
     <script src="./js/application.js"></script>
-    <script src="./js/socket.js"></script>
   </body>
 </html>

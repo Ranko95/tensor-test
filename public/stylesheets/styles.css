@@ -25,12 +25,51 @@ body {
   height: 100%;
   background-color: whitesmoke;
   border-bottom: 2px solid lightgrey;
+  overflow-y: scroll;
+}
+
+.text-area__message-wrapper {
+  width: 100%;
+  display: flex;
+}
+
+
+.text-area__message {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 40%;
+  margin: 10px 20px;
+  padding: 15px;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  overflow-wrap: break-word;
+}
+
+.flex-start {
+  border-top-right-radius: 7px;
+  justify-content: flex-start;
+}
+
+.flex-end {
+  border-top-left-radius: 7px;
+  justify-content: flex-end;
+}
+
+.left {
+  border-top-right-radius: 7px;
+}
+
+.right {
+  border-top-left-radius: 7px;
 }
 
 .chat__text-area {
   width: 100%;
   height: 85%;
 }
+
 
 .input-form {
   width: 100%;
@@ -62,6 +101,12 @@ body {
   height: 15%;
 }
 
+@media(max-width: 600px) {
+  .text-area__message {
+    width: 60%;
+  }
+}
+
 
 @media(max-width: 450px) {
   .input-form {
@@ -75,6 +120,13 @@ body {
   
   .submit-btn  {
     width: 100%;
-    height: 40%; 
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-area__message {
+    width: 80%;
   }
 }
